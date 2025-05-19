@@ -3,40 +3,46 @@ import { ChevronDown, ArrowRight } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const roles = [
-  'Technology Enthusiast',
-  'Software Developer',
-  'Data Engineer',
-  'Python Expert',
+  'cat lover',
+  'dbd exploiter',
+  'tech lover',
+  'coding genius',
 ];
 
 const Hero: React.FC = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState('');
-  const [isTyping, setIsTyping] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(100);
+
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
-    const role = roles[currentRole];
-    
-    if (isTyping) {
-      if (displayText.length < role.length) {
-        timeout = setTimeout(() => {
-          setDisplayText(role.substring(0, displayText.length + 1));
-        }, 100);
-      } else {
-        setIsTyping(false);
-        timeout = setTimeout(() => {
-          setIsTyping(true);
-          setDisplayText('');
-          setCurrentRole((prev) => (prev + 1) % roles.length);
-        }, 2000);
-      }
+    const fullText = roles[currentRole];
+    let updatedText = '';
+
+    if (isDeleting) {
+      updatedText = fullText.substring(0, displayText.length - 1);
+      setTypingSpeed(25);
+    } else {
+      updatedText = fullText.substring(0, displayText.length + 1);
+      setTypingSpeed(50);
     }
-    
+
+    const timeout = setTimeout(() => {
+      setDisplayText(updatedText);
+
+      if (!isDeleting && updatedText === fullText) {
+        setTimeout(() => setIsDeleting(true), 1500);
+      } else if (isDeleting && updatedText === '') {
+        setIsDeleting(false);
+        setCurrentRole((prev) => (prev + 1) % roles.length);
+      }
+    }, typingSpeed);
+
     return () => clearTimeout(timeout);
-  }, [displayText, currentRole, isTyping]);
+  }, [displayText, isDeleting, currentRole]);
 
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden pt-16">
@@ -47,7 +53,7 @@ const Hero: React.FC = () => {
         }`}
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-          Hello, I'm <span className="gradient-text">princegrid</span>
+          hi im <span className="gradient-text">princegrid :3</span>
         </h1>
         <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8">
           <span className="typing">{displayText}</span>

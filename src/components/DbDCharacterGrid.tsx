@@ -22,7 +22,7 @@ const characters: Character[] = [
     name: 'The Mastermind',
     type: 'killer',
     difficulty: 2,
-    bio: 'Albert Wesker, a powerful and calculating killer who uses his superior abilities to dominate the trial.',
+    bio: 'An exploit killer who uses the broken dbd spaghetti code to EXPLOIT all over the survivors.',
     image: '/wesker.png',
     perks: [
       {
@@ -60,7 +60,7 @@ This effect lingers for an additional 20/25/30 seconds.`,
     name: 'The Blight',
     type: 'killer',
     difficulty: 3,
-    bio: 'A scientific killer who uses his serum-enhanced speed to rush down survivors.',
+    bio: 'The second most broken killer who just kills you if you dont play perfectly.',
     image: '/theblight.png',
     perks: [
       {
@@ -92,7 +92,7 @@ Dragon's Grip has a cool-down of 60/50/40 seconds.`,
     name: 'Renato Lyra',
     type: 'survivor',
     difficulty: 2,
-    bio: 'Renato Lyra always keeps his eyes on the prize, and he expects the same from his teammates.',
+    bio: 'Brown just like me and very autism coded (like me).',
     image: '/renato.png',
     perks: [
       {
@@ -147,8 +147,12 @@ const DbDCharacterGrid: React.FC = () => {
           className="card bg-dark/50 hover:bg-dark/70 p-4"
           data-character-type={character.type}
         >
-          {/* Character Portrait */}
-          <div className="relative mb-4">
+          {/* Character Portrait with Bio Tooltip */}
+          <div
+            className="relative mb-4"
+            onMouseEnter={() => setActiveTooltip(`${character.id}-bio`)}
+            onMouseLeave={() => setActiveTooltip(null)}
+          >
             <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden">
               <img
                 src={character.image}
@@ -157,11 +161,9 @@ const DbDCharacterGrid: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             </div>
-            
-            {/* Character Info Tooltip */}
-            <div className="opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center bg-black/80 rounded-full transition-opacity duration-300">
-              <div className="text-center p-4">
-                <h4 className="text-primary-lighter font-semibold mb-1">{character.name}</h4>
+            {activeTooltip === `${character.id}-bio` && (
+              <div className="absolute z-10 top-full left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-dark-gray rounded-lg p-3 shadow-xl">
+                <h5 className="text-primary-lighter font-semibold mb-1">{character.name}</h5>
                 <div className="flex items-center justify-center gap-1 mb-2">
                   {[...Array(character.difficulty)].map((_, i) => (
                     <div key={i} className="w-2 h-2 bg-primary rounded-full" />
@@ -169,16 +171,12 @@ const DbDCharacterGrid: React.FC = () => {
                 </div>
                 <p className="text-xs text-gray-300">{character.bio}</p>
               </div>
-            </div>
+            )}
           </div>
 
-          {/* Character Type Icon */}
+          {/* Character Name */}
           <div className="flex justify-center mb-4">
-            {character.type === 'killer' ? (
-              <Skull className="h-6 w-6 text-primary" />
-            ) : (
-              <Users className="h-6 w-6 text-primary" />
-            )}
+            <span className="text-primary-lighter font-semibold text-lg">{character.name}</span>
           </div>
 
           {/* Perks */}
@@ -195,7 +193,6 @@ const DbDCharacterGrid: React.FC = () => {
                   alt={perk.name}
                   className="w-16 h-16 rounded-lg object-cover"
                 />
-                
                 {/* Perk Tooltip */}
                 {activeTooltip === `${character.id}-${index}` && (
                   <div className="absolute z-10 bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48 bg-dark-gray rounded-lg p-3 shadow-xl">

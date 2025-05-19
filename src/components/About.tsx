@@ -39,18 +39,18 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <p className="text-gray-300 mb-6">
-              I'm a passionate technology enthusiast and software developer with a strong background in
-              data analysis and engineering. My journey in tech has been driven by curiosity and the
-              desire to create innovative solutions to complex problems.
+              hi, i'm princegrid
             </p>
             <p className="text-gray-300 mb-6">
-              With experience in both frontend and backend development, I enjoy working across the
-              full stack and continuously expanding my knowledge in emerging technologies. I thrive in
-              collaborative environments and am always eager to learn from peers and mentors.
+              i’m a young guy from the uk with asd and adhd. i’m also heavily addicted to dbd.<br />
+              wesker main. exploiting is fun. don't judge me.
+            </p>
+            <p className="text-gray-300 mb-6">
+              i’m a comp sci student (almost finished) with a deep connection to tech and how it works.<br />
+              i like breaking things, learning how they tick, and occasionally making cool stuff too.
             </p>
             <p className="text-gray-300">
-              My approach combines technical expertise with analytical thinking, allowing me to develop
-              efficient and maintainable solutions that meet real-world needs.
+              this site’s a work in progress, so bear with me while i fix it up.
             </p>
           </div>
           
