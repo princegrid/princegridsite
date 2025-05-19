@@ -37,16 +37,14 @@ const Interests: React.FC = () => {
         ref={ref}
         className={`fade-in ${isInView ? 'visible' : ''}`}
       >
-        <h2 className="heading">Gaming Profile</h2>
+        <h2 className="heading">DBD!!!!</h2>
         
         <div className="mb-12">
           <div className="flex items-start gap-4 mb-8">
             <Gamepad2 className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
             <div>
-              <h3 className="subheading">Dead by Daylight Main</h3>
               <p className="text-gray-300 mb-6">
-                Dedicated Dead by Daylight player specializing in killer gameplay with The Mastermind and The Blight. 
-                Also proficient as a survivor main with Renato Lyra, focusing on team support and strategic gameplay.
+                I luv dbd and wesker and blight and renato and exploiting hahahajhash im so cool
               </p>
               
               {/* Character Grid */}
