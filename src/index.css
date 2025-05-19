@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #7C3AED;
+  --primary-light: #9333EA;
+  --primary-lighter: #A855F7;
+  --dark: #000000;
+  --dark-gray: #1F1F1F;
+  --light: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #7C3AED, #A855F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #7C3AED 0%, #000000 100%);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  @apply bg-dark-gray rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20;
+}
+
+.heading {
+  @apply font-bold text-3xl md:text-4xl mb-6 gradient-text;
+}
+
+.subheading {
+  @apply font-semibold text-xl md:text-2xl mb-4 text-primary-lighter;
+}
+
+.section {
+  @apply py-16 md:py-24 px-6 max-w-6xl mx-auto;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary-light text-white;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+}
+
+.skill-meter {
+  @apply h-2 bg-dark-gray rounded-full overflow-hidden;
+}
+
+.skill-level {
+  @apply h-full bg-primary rounded-full transition-all duration-1000;
+}
+
+/* Animation for the typing effect */
+.typing::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(124, 58, 237, 0.5);
+  pointer-events: none;
+}
