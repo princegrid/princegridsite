@@ -10,24 +10,24 @@ const Interests: React.FC = () => {
   const killerBuilds = [
     {
       name: "The Mastermind",
-      perks: ["Eruption", "Call of Brine", "Superior Anatomy", "Brutal Strength"],
-      playstyle: "Aggressive gen control with strong chase potential",
-      achievements: "4K streak record: 15 matches"
+      perks: ["Eruption", "Pop Goes the Weasel", "Brutal Strength", "Nowhere to Hide/Corrupt Intervention"],
+      playstyle: "Aggressive gen control with and information with brutal helping me in chase",
+      achievements: "4K streak record: 0 matches (just lost to a comp team gg)"
     },
     {
       name: "The Blight",
-      perks: ["Dragon's Grip", "Tinkerer", "Blood Echo", "Hex: Undying"],
-      playstyle: "High mobility and pressure",
-      achievements: "Average chase time: 30 seconds"
+      perks: ["Pop Goes the Weasel", "Scourge Hook: Pain Resonance", "Nowhere to Hide", "Brutal Strength"],
+      playstyle: "Disgusting blight build with insane gen pressure and braindead info with brutal + nwth",
+      achievements: "Average chase time: 30 seconds (+100 seconds if I miss my rushes)"
     }
   ];
 
   const survivorBuilds = [
     {
       name: "Renato Lyra",
-      perks: ["Wiretap", "Reactive Healing", "Better Than New", "Reassurance"],
-      playstyle: "Altruistic support with information gathering",
-      achievements: "90% escape rate in solo queue"
+      perks: ["Windows of Opportunity", "Champion of Light", "Fixated", "Iron Will"],
+      playstyle: "Chase build with strong save potential",
+      achievements: "Best save rate in my swfs 😎😎🌾"
     }
   ];
 
@@ -119,28 +119,28 @@ const Interests: React.FC = () => {
                   <Timer className="h-6 w-6 text-primary" />
                   <div>
                     <p className="text-sm text-gray-400">Total Hours</p>
-                    <p className="text-xl font-semibold text-primary-lighter">1,500+</p>
+                    <p className="text-xl font-semibold text-primary-lighter">3000+ (incl console)</p>
                   </div>
                 </div>
                 <div className="card bg-dark/50 flex items-center gap-3">
                   <Trophy className="h-6 w-6 text-primary" />
                   <div>
-                    <p className="text-sm text-gray-400">Rank Achievement</p>
-                    <p className="text-xl font-semibold text-primary-lighter">Iridescent I</p>
+                    <p className="text-sm text-gray-400">Achievements</p>
+                    <p className="text-xl font-semibold text-primary-lighter">200+</p>
                   </div>
                 </div>
                 <div className="card bg-dark/50 flex items-center gap-3">
                   <Swords className="h-6 w-6 text-primary" />
                   <div>
                     <p className="text-sm text-gray-400">Killer Win Rate</p>
-                    <p className="text-xl font-semibold text-primary-lighter">85%</p>
+                    <p className="text-xl font-semibold text-primary-lighter">65%</p>
                   </div>
                 </div>
                 <div className="card bg-dark/50 flex items-center gap-3">
                   <Shield className="h-6 w-6 text-primary" />
                   <div>
                     <p className="text-sm text-gray-400">Survival Rate</p>
-                    <p className="text-xl font-semibold text-primary-lighter">70%</p>
+                    <p className="text-xl font-semibold text-primary-lighter">58%</p>
                   </div>
                 </div>
               </div>
@@ -152,9 +152,9 @@ const Interests: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div className="card">
             <Music className="h-8 w-8 text-primary mb-4" />
-            <h4 className="font-semibold text-primary-lighter mb-2">Music Production</h4>
+            <h4 className="font-semibold text-primary-lighter mb-2">Editing</h4>
             <p className="text-gray-400">
-              Experimenting with digital audio workstations and creating electronic music tracks in my free time.
+              Creating cool edits of my favourite characters and moments in games.
             </p>
           </div>
           
@@ -168,9 +168,9 @@ const Interests: React.FC = () => {
           
           <div className="card">
             <Camera className="h-8 w-8 text-primary mb-4" />
-            <h4 className="font-semibold text-primary-lighter mb-2">Digital Photography</h4>
+            <h4 className="font-semibold text-primary-lighter mb-2">Hardware/Tinkering</h4>
             <p className="text-gray-400">
-              Capturing and editing urban landscapes and architectural photography.
+              Building network devices and tinkering with hardware to enhance my tech skills.
             </p>
           </div>
         </div>

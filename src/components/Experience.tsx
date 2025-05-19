@@ -18,7 +18,7 @@ const Experience: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
       title: 'Chief Technology Officer',
-      company: 'Digital Platform',
+      company: 'XXX Tech',
       period: '2023 - Present',
       description: 'Leading platform development and technical strategy, managing a team of developers to enhance the platform and implement new features.',
       achievements: [
@@ -27,11 +27,11 @@ const Experience: React.FC = () => {
         'Designed scalable system architecture',
         'Led successful migration to cloud infrastructure'
       ],
-      technologies: ['Python', 'React', 'AWS', 'SQL', 'Node.js']
+      technologies: ['Python', 'React', 'AWS', 'SQL', 'Node.js', 'PostgreSQL', 'Supabase']
     },
     {
       title: 'Hardware Support Technician',
-      company: 'Tech Solutions Inc.',
+      company: 'XXX Town Hall',
       period: '2022 - 2023',
       description: 'Provided comprehensive hardware support and troubleshooting services, evaluating and repairing equipment to ensure optimal performance.',
       achievements: [
@@ -44,7 +44,7 @@ const Experience: React.FC = () => {
     },
     {
       title: 'Data Analysis Project Lead',
-      company: 'Financial Research Group',
+      company: 'A very big american bank 😉',
       period: '2021 - 2022',
       description: 'Led a research team analyzing financial market data, developing predictive models and generating actionable insights for stakeholders.',
       achievements: [

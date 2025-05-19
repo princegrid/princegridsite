@@ -77,7 +77,7 @@ Dragon's Grip has a cool-down of 60/50/40 seconds.`,
         name: 'Hex: Blood Favor',
         description: 'Pallets near your successful basic attacks are blocked for 15 seconds.',
         cooldown: 'Passive while hex active',
-        icon: '/perks/bloodfavor.png'
+        icon: '/perks/bloodfavour.png'
       },
       {
         name: 'Hex: Undying',
@@ -106,7 +106,7 @@ Background Player causes the Exhausted Status Effect for 30/25/20 seconds.
 Background Player cannot be used when Exhausted.
 `,
         cooldown: '30/25/20 seconds',
-        icon: '/perks/backgroundplayer.png'
+        icon: '/perks/bgp.png'
       },
       {
         name: 'Blood Rush',
