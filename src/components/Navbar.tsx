@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <a href="#home" className="flex items-center text-white">
               <Code className="h-8 w-8 text-primary mr-2" />
-              <span className="font-bold text-xl">princegrid</span>
+              <span className="font-bold text-xl">princegrid.dev</span>
             </a>
           </div>
           

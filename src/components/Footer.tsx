@@ -19,17 +19,11 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+            <a href="https://github.com/princegrid" className="text-gray-400 hover:text-primary transition-colors">
               <Github className="h-6 w-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-              <Linkedin className="h-6 w-6" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+            <a href="https://x.com/princegrid" className="text-gray-400 hover:text-primary transition-colors">
               <Twitter className="h-6 w-6" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-              <Mail className="h-6 w-6" />
             </a>
           </div>
         </div>
